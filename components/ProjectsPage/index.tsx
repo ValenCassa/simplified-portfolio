@@ -1,4 +1,5 @@
 import { MotionContainer } from "components/Layout/Container";
+import Head from "next/head";
 import { Project } from "types/Project";
 import PageTable from "../@/PageTable";
 import PageTitle from "../@/PageTitle";
@@ -14,16 +15,21 @@ const variants = {
 
 const ProjectsPage = ({ projects }: { projects: Project[] }) => {
   return (
-    <MotionContainer
-      variants={variants}
-      initial="initial"
-      animate="animate"
-      exit={"initial"}
-      transition={{ duration: 0.3 }}
-    >
-      <PageTitle>Projects</PageTitle>
-      <PageTable data={projects} type="project" />
-    </MotionContainer>
+    <>
+      <Head>
+        <title>Projects | Valentin Cassarino</title>
+      </Head>
+      <MotionContainer
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        exit={"initial"}
+        transition={{ duration: 0.3 }}
+      >
+        <PageTitle>Projects</PageTitle>
+        <PageTable data={projects} type="project" />
+      </MotionContainer>
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import IntroSection from "./@/IntroSection";
 import SectionProvider from "./@/SectionProvider";
 import PostsSection from "./@/PostsSection";
 import NowSection from "./@/ContentTable";
+import Meta from "components/@/Meta";
 
 const variants = {
   initial: {
@@ -27,6 +28,11 @@ const IndexPage = ({
 }) => {
   return (
     <>
+      <Meta
+        title="Homepage | Valentin Cassarino"
+        description="Go have a look at my portfolio!"
+        image={"https://i.imgur.com/88AmjpD.png"}
+      />
       <SectionProvider>
         <MotionContainer
           variants={variants}

@@ -8,22 +8,28 @@ import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import ClockComponent from "components/IndexPage/@/Clock";
 import MobileMenu from "components/MobileMenu";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
 
   return (
-    <ThemeProvider defaultTheme="light">
-      <UpperBlur />
-      <MobileMenu />
-      <ClockComponent />
-      <Layout>
-        <AnimatePresence initial mode="wait">
-          <Component {...pageProps} key={pathname} />
-        </AnimatePresence>
-      </Layout>
-      <DockComponent />
-      <div id="dock-portal" />
-    </ThemeProvider>
+    <>
+      <Head>
+        <link rel="icon" href="/img/logo-tab.png" />
+      </Head>
+      <ThemeProvider defaultTheme="light">
+        <UpperBlur />
+        <MobileMenu />
+        <ClockComponent />
+        <Layout>
+          <AnimatePresence initial mode="wait">
+            <Component {...pageProps} key={pathname} />
+          </AnimatePresence>
+        </Layout>
+        <DockComponent />
+        <div id="dock-portal" />
+      </ThemeProvider>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import PageTable from "components/@/PageTable";
 import PageTitle from "components/@/PageTitle";
 import { MotionContainer } from "components/Layout/Container";
+import Head from "next/head";
 import { Post } from "types/Post";
 
 const variants = {
@@ -14,16 +15,22 @@ const variants = {
 
 const WritingsPage = ({ posts }: { posts: Post[] }) => {
   return (
-    <MotionContainer
-      variants={variants}
-      initial="initial"
-      animate="animate"
-      exit={"initial"}
-      transition={{ duration: 0.3 }}
-    >
-      <PageTitle>Writings</PageTitle>
-      <PageTable data={posts} type="post" />
-    </MotionContainer>
+    <>
+      <Head>
+        <title>Writings | Valentin Cassarino</title>
+      </Head>
+
+      <MotionContainer
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        exit={"initial"}
+        transition={{ duration: 0.3 }}
+      >
+        <PageTitle>Writings</PageTitle>
+        <PageTable data={posts} type="post" />
+      </MotionContainer>
+    </>
   );
 };
 
