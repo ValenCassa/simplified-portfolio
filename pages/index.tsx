@@ -28,6 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
           projects,
         },
       },
+      revalidate: 60,
     };
   } catch (e) {
     return {
@@ -37,6 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
           projects: [],
         },
       },
+      revalidate: 60,
     };
   }
 };

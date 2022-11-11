@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const project = await getOneProject(params?.id as string);
     return {
       props: { project },
-      revalidate: 1,
+      revalidate: 60,
     };
   } catch (e) {
     return {

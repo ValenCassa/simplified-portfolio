@@ -17,12 +17,14 @@ export const getStaticProps: GetStaticProps = async () => {
       props: {
         posts: sortedPosts,
       },
+      revalidate: 60,
     };
   } catch (e) {
     return {
       props: {
         posts: [],
       },
+      revalidate: 60,
     };
   }
 };

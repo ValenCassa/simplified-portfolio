@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const writing = await getOnePost(params?.id as string);
     return {
       props: { writing },
-      revalidate: 1,
+      revalidate: 60,
     };
   } catch (e) {
     return {
