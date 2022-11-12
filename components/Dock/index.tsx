@@ -15,6 +15,7 @@ import MailIcon from "public/svg/MailIcon.svg";
 import LinkedinIcon from "public/svg/LinkedinIcon.svg";
 import ThemeItem from "./utils/ThemeItem";
 import CVIcon from "public/svg/CVIcon.svg";
+import FeedIcon from "public/svg/FeedIcon.svg";
 
 const DockComponent = () => {
   const [domReady, setDomReady] = useState(false);
@@ -56,6 +57,13 @@ const DockComponent = () => {
             icon={<LinkedinIcon />}
             label="LinkedIn"
             href="https://www.linkedin.com/in/valentin-cassarino/"
+          />
+        </DockItem>
+        <DockItem>
+          <Item
+            icon={<FeedIcon />}
+            label="Feed"
+            href="https://feed.valencassa.dev"
           />
         </DockItem>
         <DockItem divider>
