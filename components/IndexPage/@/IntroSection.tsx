@@ -22,9 +22,10 @@ const IntroSection = () => {
     <SectionContainer name="Intro">
       <Name>Valentin Cassarino</Name>
       <Description>
-        I'm a <CoolText>Front End Developer</CoolText> based in Argentina with a
-        passion for designing and coding stuff. Love crafting interfaces and
-        building polished web experiences.
+        I'm a <CoolText>Front End Developer</CoolText> based in Argentina,
+        driven by my passion for creating beautiful and engaging web
+        experiences. I'm always striving to produce the highest quality code
+        while designing intuitive interfaces.
       </Description>
     </SectionContainer>
   );
