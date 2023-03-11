@@ -16,7 +16,6 @@ import LinkedinIcon from "public/svg/LinkedinIcon.svg";
 import ThemeItem from "./utils/ThemeItem";
 import CVIcon from "public/svg/CVIcon.svg";
 import FeedIcon from "public/svg/FeedIcon.svg";
-
 const DockComponent = () => {
   const [domReady, setDomReady] = useState(false);
 
@@ -77,7 +76,7 @@ const DockComponent = () => {
           <Item
             icon={<CVIcon />}
             label="Download CV"
-            href={`https://drive.google.com/uc?export=download&id=17z0YAdxHh1ffVMGwjUcr8eGhUsYX4mPJ`}
+            href={`https://drive.google.com/uc?export=download&id=1fyZ_WvSBV3r82Yp4-xO4BeKQbBMvFHhc`}
           />
         </DockItem>
         <DockItem>
